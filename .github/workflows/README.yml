@@ -1,0 +1,23 @@
+name: Update README
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - name: Update social media badges
+        uses: dorian-marchal/social-media-badges@v3
+        with:
+          # Replace the values below with your own social media URLs
+          linkedin: 'https://www.linkedin.com/in/abdullah-ku%C5%9F-b0b421212/'
+          github: 'https://github.com/abdks'
+          email: 'mailto:abdullahkus080@gmail.com'
+          filename: 'README.md'
